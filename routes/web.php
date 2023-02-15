@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\SendEmailController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -33,3 +34,4 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+Route::get('send-email', [SendEmailController::class, 'index']);

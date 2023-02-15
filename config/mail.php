@@ -51,6 +51,7 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
+            'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID'),
         ],
 
         'postmark' => [
@@ -76,6 +77,9 @@ return [
             'mailers' => [
                 'smtp',
                 'log',
+                'postmark',
+                'mailgun',
+                'sendmail',
             ],
         ],
     ],
